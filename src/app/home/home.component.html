@@ -1,0 +1,17 @@
+<p>home works!</p>
+<div *ngFor="let profile of profiles; let i = index">
+    <div class="card">
+      <img [src]="profile.image" alt="Profile Image">
+      <h3>{{ profile.name }}</h3>
+      <p>{{ profile.description }}</p>
+  
+      <button (click)="onYes(profile.id)">Yes</button>
+      <button (click)="onNo(profile.id)">No</button>
+      
+      <div class="profile-actions">
+        <button (click)="goToGesture()">Go to Gesture Screen</button>
+        <button (click)="viewProfile(profile.id)">View Profile</button>
+      </div>
+    </div>
+  </div>
+  

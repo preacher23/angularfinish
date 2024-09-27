@@ -1,0 +1,9 @@
+<div *ngIf="profile">
+    <img [src]="profile.images[currentImageIndex]" alt="Profile Photo" />
+    <button (click)="prevImage()">Previous</button>
+    <button (click)="nextImage()">Next</button>
+    <button (click)="goBack()">Back</button>
+
+    <h2>{{ profile.name }}</h2>
+    <p>{{ profile.description }}</p>
+  </div>

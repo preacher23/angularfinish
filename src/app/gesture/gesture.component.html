@@ -1,0 +1,12 @@
+<p>gesture works!</p>
+<div class="card-stack">
+    <div *ngFor="let profile of profiles">
+      <img [src]="profile.image" alt="Profile Image">
+      <h3>{{ profile.name }}</h3>
+      <p>{{ profile.description }}</p>
+  
+      <button (click)="onSwipeRight(profile.id)">👍</button>
+      <button (click)="onSwipeLeft(profile.id)">👎</button>
+    </div>
+  </div>
+  
